@@ -1,0 +1,16 @@
+{
+    "name": "garyclarketech/php-framework-pro",
+    "description": "A PHP framework tutorial project",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gary Clarke",
+            "email": "info@garyclarke.tech"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "6.3.x-dev"
+    },
+    "challenge_instructions": "To set up PSR-4 standard autoloading, so that the 'App' namespace is mapped to the 'src' directory, how should this file be edited?$"
+}
