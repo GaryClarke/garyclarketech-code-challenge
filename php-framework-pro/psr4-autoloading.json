@@ -9,8 +9,12 @@
             "email": "info@garyclarke.tech"
         }
     ],
-    "require": {
-        "symfony/var-dumper": "6.3.x-dev"
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
     },
-    "challenge_instructions": "To set up PSR-4 standard autoloading, so that the 'App' namespace is mapped to the 'src' directory, how should this file be edited?$"
+    "require-dev": {
+        "symfony/var-dumper": "6.3.x-dev"
+    }
 }
