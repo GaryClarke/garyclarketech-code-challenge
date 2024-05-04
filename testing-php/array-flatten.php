@@ -1,5 +1,7 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
 /**
  * How can you modify the ArrayFlattener::flatten method
  * so that it can take a multidimensional array and flatten
@@ -9,6 +11,7 @@
  * !!Warning - this will only work IF all key names are unique!!
  *
  * Course: https://www.garyclarke.tech/p/php-complete-testing-bundle
+ * Course: https://www.garyclarke.tech/p/learn-object-oriented-php
  */
 class ArrayFlattener
 {
@@ -28,4 +31,6 @@ $before = [
 ];
 
 $after = ArrayFlattener::flatten($before);
+
+dd($after);
 
