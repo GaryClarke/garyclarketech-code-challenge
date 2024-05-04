@@ -14,7 +14,7 @@ class ArrayFlattener
 {
     public static function flatten(array $array): array
     {
-        // Flatten and return the array with keys preserved
+        return iterator_to_array(new RecursiveIteratorIterator(new RecursiveArrayIterator($array)));
     }
 }
 
@@ -27,10 +27,5 @@ $before = [
     ]
 ];
 
-$after = [
-    'key_one' => 1,
-    'key_two' => 2,
-    'key_three' => 3,
-    'key_four' => 4
-];
+$after = ArrayFlattener::flatten($before);
 
