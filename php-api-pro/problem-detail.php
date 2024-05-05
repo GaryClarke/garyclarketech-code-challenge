@@ -26,9 +26,15 @@ enum ProblemDetail: int
         return match ($this) {
             self::BAD_REQUEST => 'https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1',
             self::UNAUTHORIZED => 'https://datatracker.ietf.org/doc/html/rfc7235#section-3.1',
-            self::FORBIDDEN => 'https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.3'
+            self::FORBIDDEN => 'https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.3',
+            default => 'about:blank'
         };
     }
 }
 
 $statusCode = 403;
+
+$type = ProblemDetail::tryFrom($statusCode)?->type();
+
+dd($type);
+
