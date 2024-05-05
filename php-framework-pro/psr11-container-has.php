@@ -38,4 +38,4 @@ class Container implements ContainerInterface
 $container = new Container();
 $exampleClass = new class {};
 $container->set('example-entry', $exampleClass);
-$res = $container->has('foo');
+$res = $container->has('example-entry');
