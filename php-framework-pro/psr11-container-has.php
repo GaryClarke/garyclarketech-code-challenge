@@ -5,6 +5,12 @@ use Psr\Container\ContainerInterface;
 
 require_once 'vendor/autoload.php';
 
+/**
+ * Challenge: Implement the `has` method
+ *
+ * The `has` method should check if the provided identifier exists in the container.
+ * Keep in mind that an entry might have been added using the `set` method.
+ */
 class Container implements ContainerInterface
 {
     private array $entries = [];
@@ -28,3 +34,8 @@ class Container implements ContainerInterface
         // .. what goes here?
     }
 }
+
+$container = new Container();
+$exampleClass = new class {};
+$container->set('example-entry', $exampleClass);
+$res = $container->has('foo');
