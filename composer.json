@@ -4,5 +4,10 @@
     },
     "require": {
         "psr/container": "2.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
     }
 }
