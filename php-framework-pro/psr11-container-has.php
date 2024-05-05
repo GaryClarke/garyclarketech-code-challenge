@@ -1,7 +1,7 @@
 <?php
 
+use App\Exception\NotFoundException;
 use Psr\Container\ContainerInterface;
-use Psr\Container\NotFoundExceptionInterface;
 
 require_once 'vendor/autoload.php';
 
@@ -17,9 +17,7 @@ class Container implements ContainerInterface
     public function get($id): mixed
     {
         if (!$this->has($id)) {
-            throw new class("$id not found")
-                extends \Exception implements NotFoundExceptionInterface {
-            };
+            throw new NotFoundException("$id not found");
         }
 
         return $this->entries[$id];
