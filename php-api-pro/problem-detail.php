@@ -7,7 +7,7 @@ require_once 'vendor/autoload.php';
 /**
  * Challenge:
  *
- * Given a status code, such as $statusCode = 403, write code to retrieve
+ * Given a status code, such as $statusCode = 403, what code is needed to retrieve
  * the corresponding URL that provides information about the problem.
  * Use the ProblemDetail enum below to accomplish this task.
  *
