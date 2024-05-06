@@ -6,7 +6,7 @@ namespace App;
 
 class HttpClient implements HttpClientInterface
 {
-    public function __construct()
+    public function __construct(private string $url)
     {
     }
 
