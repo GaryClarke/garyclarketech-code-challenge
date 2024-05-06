@@ -34,7 +34,9 @@ enum ProblemDetail: int
 
 $statusCode = 403;
 
-$type = ProblemDetail::tryFrom($statusCode)?->type();
+$problem = ProblemDetail::tryFrom($statusCode);
+
+$type = $problem?->type();
 
 dd($type);
 
