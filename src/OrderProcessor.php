@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace App;
 
+/**
+ * How can I edit this high-level module (OrderProcessor) so that it depends upon
+ * an abstraction, rather than a concrete implementation (HttpClient)
+ *
+ * Also, how would you change the unit test to work around this abstraction.
+ */
 class OrderProcessor
 {
     public function processOrder(array $orderData): array
