@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 /**
  * Challenge:
@@ -19,7 +19,7 @@ enum ProblemDetail: int
     case BAD_REQUEST = 400;
     case UNAUTHORIZED = 401;
     case FORBIDDEN = 403;
-    // ...
+    case NOT_FOUND = 404;
 
     public function type(): string
     {
@@ -32,4 +32,6 @@ enum ProblemDetail: int
     }
 }
 
-$statusCode = 403;
+$statusCode = 404;
+
+var_dump(ProblemDetail::tryFrom($statusCode)->type());
