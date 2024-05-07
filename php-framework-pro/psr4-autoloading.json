@@ -12,5 +12,9 @@
     "require": {
         "symfony/var-dumper": "6.3.x-dev"
     },
-    "challenge_instructions": "How should this file be edited so that the 'App' namespace is mapped to the 'src' directory using PSR-4 autoloading? What command should be run after this is added?"
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
 }
