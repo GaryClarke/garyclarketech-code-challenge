@@ -5,7 +5,7 @@ declare(strict_types=1);
 use App\OrderProcessor;
 use PHPUnit\Framework\TestCase;
 
-class OrderProcessorTest extends TestCase
+class RefactorToAbstractionTest extends TestCase
 {
     public function testProcessedOrdersAreMarkedCorrectly(): void
     {
