@@ -14,10 +14,18 @@ class ArrayFlattener
 {
     public static function flatten(array $array): array
     {
-        // Flatten and return the array with keys preserved
+        $result = [];
+
+        foreach ($array as $key => $value) {
+            if (is_array($value)) {
+                $result = array_merge($result, self::flatten($value));
+            } else {
+                $result[$key] = $value;
+            }
+        }
+        return $result;
     }
 }
-
 $before = [
     'key_one' => 1,
     'key_two' => 2,
@@ -34,3 +42,5 @@ $after = [
     'key_four' => 4
 ];
 
+$result = ArrayFlattener::flatten($before);
+print $result == $after ? "Its Match" : "Its not Match";
