@@ -14,7 +14,7 @@ class Config
 }
 
 $config = new Config('https://some-host', 'super-secret-password');
-$serialized = serialize($config);
-print $serialized . PHP_EOL;
+
+// 👉 O:6:"Config":1:{s:4:"host";s:17:"https://some-host";}
 
 
