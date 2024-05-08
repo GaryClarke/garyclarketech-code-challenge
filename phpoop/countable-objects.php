@@ -7,10 +7,15 @@
  *
  * Course: https://www.garyclarke.tech/p/learn-object-oriented-php
  */
-class CountableObjectDemo
+class CountableObjectDemo implements Countable
 {
     public function __construct(private array $items = [])
     {
+    }
+
+    public function count(): int
+    {
+        return count($this->items);
     }
 }
 
