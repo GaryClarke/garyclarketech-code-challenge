@@ -11,6 +11,13 @@ class Config
         private string $password
     ) {
     }
+
+    public function __serialize(): array
+    {
+        return [
+            'host' => $this->host,
+        ];
+    }
 }
 
 $config = new Config('https://some-host', 'super-secret-password');
