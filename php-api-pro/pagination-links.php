@@ -2,6 +2,12 @@
 
 require_once 'vendor/autoload.php';
 
+/**
+ * Challenge - How do you create the 'next' pagination link?
+ *
+ * Course: https://www.garyclarke.tech/p/php-api-pro
+ */
+
 $totalItems = 35;
 $page = 1;
 $itemsPerPage = 10;
