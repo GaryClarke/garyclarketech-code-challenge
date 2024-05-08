@@ -34,4 +34,4 @@ enum ProblemDetail: int
 
 $statusCode = 404;
 
-var_dump(ProblemDetail::tryFrom($statusCode)->type());
+var_dump(ProblemDetail::tryFrom($statusCode)?->type());
