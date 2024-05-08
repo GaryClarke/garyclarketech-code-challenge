@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once 'vendor/autoload.php';
+
 class Config
 {
     public function __construct(
@@ -9,18 +11,10 @@ class Config
         private string $password
     ) {
     }
-
-    public function _serialize(): array
-    {
-        return [
-            'host' => $this->host,
-            'user' => $this->password,
-        ];
-    }
 }
 
 $config = new Config('https://some-host', 'super-secret-password');
 $serialized = serialize($config);
-dd($serialized);
+print $serialized . PHP_EOL;
 
 
