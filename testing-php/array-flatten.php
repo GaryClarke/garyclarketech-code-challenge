@@ -15,6 +15,11 @@ class ArrayFlattener
     public static function flatten(array $array): array
     {
         // Flatten and return the array with keys preserved
+        return iterator_to_array(
+            new RecursiveIteratorIterator(
+                new RecursiveArrayIterator($array)
+            )
+        );
     }
 }
 
@@ -33,4 +38,3 @@ $after = [
     'key_three' => 3,
     'key_four' => 4
 ];
-
