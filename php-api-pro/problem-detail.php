@@ -33,3 +33,4 @@ enum ProblemDetail: int
 }
 
 $statusCode = 403;
+var_dump(ProblemDetail::tryFrom($statusCode)?->type());
