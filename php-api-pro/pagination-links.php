@@ -19,7 +19,7 @@ $links = [
     'first' => sprintf('%s?page=1&itemsPerPage=%d', $path, $itemsPerPage),
     'last'  => sprintf('%s?page=%d&itemsPerPage=%d', $path, $totalPages, $itemsPerPage),
     'prev'  => $page > 1 ? sprintf('%s?page=%d&itemsPerPage=%d', $path, $page - 1, $itemsPerPage) : null,
-    'next'  => "👀 WHAT GOES HERE?"
+    'next'  => $page < $totalPages ? sprintf('%s?page=%d&itemsPerPage=%d', $path, $page + 1, $itemsPerPage) : null,
 ];
 
 // The result will look like this for page 1
