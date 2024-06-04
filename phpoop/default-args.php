@@ -21,3 +21,4 @@ class Route
     }
 }
 
+$route = new Route(name: 'home', methods: ['GET', 'POST']);
